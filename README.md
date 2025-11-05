@@ -93,8 +93,8 @@ O código-fonte completo e comentado está disponível no arquivo `sketch.ino` n
 
   * Geovana Hungria
   * Victor Vinicius
-  * Zenaide Silva
-  * Leandro Carlos
+  * Zenaide Silva 
+  * Leandro Carlos (Professor)
 
 ## 📜 Licença
 
