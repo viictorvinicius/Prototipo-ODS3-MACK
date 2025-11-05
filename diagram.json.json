@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "author": "Victor",
+  "editor": "Wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -100, "left": 0 },
+    {
+      "type":"wokwi-pir-motion-sensor",
+      "id": "pir",
+      "top": -110,
+      "left": 200
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led",
+      "top": -10,
+      "left": 200,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -10,
+      "left": 250,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-buzzer", "id": "bz1", "top": -10, "left": 350 }
+  ],
+  "connections": [
+    ["esp:TX", "$serial:RX", "", ""],
+    ["esp:RX", "$serial:TX", "", ""],
+    ["esp:GND", "pir:GND", "black", ["v0"]],
+    ["esp:3V3", "pir:VCC", "red", ["v0"]],
+    ["pir:OUT", "esp:D27", "green", ["v0"]],
+    ["led:C", "esp:GND", "black", ["v0"]],
+    ["led:A", "r1:1", "red", ["h0"]],
+    ["r1:2", "esp:D25", "green", ["v0"]],
+    ["bz1:1", "esp:D26", "green", ["v0"]],
+    ["bz1:2", "esp:GND", "black", ["h0", "v0"]]
+  ]
+}
